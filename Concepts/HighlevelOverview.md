@@ -17,3 +17,10 @@ The GladLive launcher has two branches. A WPF branch for our main Windows target
 If the game client for the game the user wants to play is up-to-date the user will be allowed to launch the game client.
 
 ### Phase 2
+
+1. Client's connect to [ProxyLoadBalancer](https://github.com/GladLive/GladLive.ProxyLoadBalancer)
+2. Client's encrypt password with RSA public key generated with [RSA Gen](https://github.com/GladLive/GladLive.Security.RSAGen) that was created from serverside cert.
+3. Client's send message packed with Login [Payload](https://github.com/GladLive/GladLive.Common/tree/master/src/GladLive.Common.Payloads/Payloads).
+4. [ProxyLoadBalancer](https://github.com/GladLive/GladLive.ProxyLoadBalancer) routes message to [ASP AuthService](https://github.com/GladLive/GladLive.AuthService.ASP)
+5. [ASP AuthService](https://github.com/GladLive/GladLive.AuthService.ASP) responds and message is routed with GladNet2 routing back to the requesting client.
+6. Client is either authenticated or disconnected.
