@@ -2,7 +2,7 @@
 
 GladLive is network service comparable to Xboxlive or Steam for .Net applications. It's designed for distributed use with an emphasis on scalability. It provides core serives any online game requires such as:
   - oAuth/JWT Authentication*
-  - Patching*
+  - Patching
   - Profiles*
   - Lobby*
   - Chat (voice/message)
@@ -13,6 +13,14 @@ GladLive is network service comparable to Xboxlive or Steam for .Net application
 (* denotes the service already exists or is partially implemented)
 
 # What can GladLive do for me?
+
+GladLive provides several services and features but the true potential of GladLive is its arcitecture and ease-of-use.
+
+**GladLive Integration** GladLive is a service where you can pick and choose what services and modules you run. This is due to the distributed nature of GladLive which relies on the JWT for identification. On top of this flexibility it utilizes a Unity3D HTTP client called GladNet. Integration of this client into your Unity3D project or .Net project is simple and doesn't need to be directly integration into your application's source. This makes adding additional GladLive services to your application, or removing them if you no longer want them, as simple as removing the libraries and modules.
+
+**GladLive Scalability, Elasticity and Loadbalancing** Have 10 players? No problem. GladLive can service their requests by running server applications on Mac/Linux/Windows on a home laptop with nearly no bandwidth requirement. No need to dedicated servers with a monthly fee. Have 10,000 players? GladLive is built with scalability in mind. Utilizing ASP core's multithreaded async request handling you get the most throughput possible while still staying highlevel. The stateless nature of most of the GladLive applications allows you to dynamically scale and add server applications when demand rises or remove them when demand falls. This requires **NO** change in source code and many services such as AWS can help you do this automagically. 30,000 people decide to play your game out of the blue one day? You're prepared to service them and retain them as users. Not keeping scalability in mind means you could use thousands of potential users just because your service bit the dust during a load spike.
+
+**GladLive Fault Tolerance** GladLive is built in such a way to reduce gameplay disruption as there is no single point of failure. The only critical service being the AuthenticationService but is only needed to introduce new users to the GladLive network. Should a particular service outage occur, say the Profile service or Authentication service, other services will be unaffected. Users can continue to play their games but will not be able to access the disrupted services until their recovery. In many cases their gameplay will be unaffected. No two GladLive services depend on eachother so if users cannot chat due to a ChatService disruption they can still view profiles or join lobbies. This helps retain users during disasters and should positivwely affect the rentention of playerbases.
 
 ## How does GladLive work?
 
