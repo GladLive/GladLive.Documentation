@@ -7,6 +7,8 @@ GladLive is network service comparable to Xboxlive or Steam for .Net application
   - Lobby*
   - Chat (voice/message)
   - Matchmaking
+  - Friends/Group System
+  - Clan System
   - Web*
   - TLS/HTTPS*
 
@@ -46,7 +48,9 @@ GladLive is licensed under MIT and therefore costs you $0 dollars. No licensing 
 
 ### How much does GladLive cost to run?
 
-For most users GladLive will cost you nothing to run. With low bandwidth requires and the fact that it's essentially a webservice which doesn't even need to service js/httml/css it's easier to run than a basic website. You can run it on your old laptop if you only have a handful of users. Many far more demanding MMOs have run on lesser hardware than is available in your room right now.
+Many GladLive services such as Authentication, Profile system and others are maintained and run by the GladLive developers. These services could be run by you but there isn't a need. This means there is very few services you even need to run yourself.
+
+GladLive will cost you nothing to run in almost all cases. With low bandwidth requires and the fact that it's essentially a webservice which doesn't even need to service js/httml/css it's easier to run than a basic website. You can run it on your old laptop if you only have a handful of users. Many far more demanding MMOs have run on lesser hardware than is available in your room right now.
 
 With a low memory and CPU footprint GladLive can run on micro AWS instances which would handle more load than most games will ever see. For the same price of an Xboxlive monthly suscription you can run GladLive on industry grade cloud instances which is basically an XboxLive-like service. You may never even need to though.
 
