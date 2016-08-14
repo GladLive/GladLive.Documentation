@@ -3,6 +3,7 @@
 GladLive is network service comparable to Xboxlive or Steam for .Net applications. It's designed for distributed use with an emphasis on scalability. It provides core services any online game requires such as:
   - oAuth/JWT Authentication*
   - Patching
+  - Launcher
   - Profiles*
   - Lobby*
   - Chat (voice/message)
