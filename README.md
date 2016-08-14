@@ -12,6 +12,14 @@ GladLive is network service comparable to Xboxlive or Steam for .Net application
 
 (* denotes the service already exists or is partially implemented)
 
+# Tell me about those Services
+
+**Authentication:** The GladLive authentication service is an oAuth2 service that issues signed JSON Web Tokens for authorization accross all other applications. This allows GladLive to be mostly stateless, loosely coupled and segregated.
+
+**Profiles:** The GladLive Profile service provides a basic profile system. It services basic information requests about who other users are. This can be extended on a per-usecase basis.
+
+**Lobby:** The GladLive Lobby module consists of a generic Lobby/Party system. It provides for the ability to implement several types of lobbies and parties. Currently there is an already implemented PeerToPeer lobby system module available for use. This is a typical setup that most FPS p2p games may have.
+
 # What can GladLive do for me?
 
 GladLive provides several services and features but the true potential of GladLive is its arcitecture and ease-of-use and the meta-features.
