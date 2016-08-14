@@ -18,7 +18,7 @@ GladLive is network service comparable to Xboxlive or Steam for .Net application
 
 GladLive is primarily based on HTTP and the new crossplatform ASP core platform. The choice of HTTP was simply due to the availablity of technologies that allow HTTP to scale and the ability to utilize the same services to service Web requests.
 
-Yes, that's right. GladLive can function in your application/game **and** service your web back-end and front-end needs in a single application.
+Yes, that's right. GladLive can service requests from your application/game **and** service your web back-end and front-end needs in a single application. This saves considerable development time by sharing resources, services and code between game and web. This also helps keep your website in feature parity with your in-game services.
 
 ### Modules
 
